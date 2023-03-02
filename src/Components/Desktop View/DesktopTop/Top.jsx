@@ -45,7 +45,6 @@ function Top() {
      {/* INPUTFIELDS!!!!!! */}
 
      <Stack 
-     p={3} 
      direction='row' 
      spacing={5} 
      sx={{
@@ -55,17 +54,26 @@ function Top() {
       backgroundImage:'url(/src/images/bg-shorten-desktop.svg)',
       backgroundRepeat:'no-repeat',
       borderRadius:'10px',
-      backgroundSize:'cover'
+      backgroundSize:'cover',
+      padding:{
+        lg:'3rem' //1200
+      }
       }}
       >
 
       <TextField 
-      label='Shorten a link here...' 
+      InputProps={{
+        style:{
+          borderRadius:'25px'
+        }
+      }}
+      placeholder='Shorten a link here...' 
       sx={{
         width:{
           lg: '60%' //1200
       },
-      backgroundColor:'white'
+      backgroundColor:'white',
+      borderRadius:'25px'
       }} />
          
          <Button style={{textTransform:'none'}} variant='contained' disableElevation>Shorten it!</Button>

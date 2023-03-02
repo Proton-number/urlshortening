@@ -3,6 +3,8 @@ import { Box, Paper, Typography, Stack, TextField, InputAdornment, IconButton , 
 import './Desktop.css'
 import Nav from './DesktopTop/Nav'
 import Top from './DesktopTop/Top'
+import Middle from './DesktopMiddle/Middle'
+import Footer from './DesktopFooter/Footer'
 
 
 function Desktop() {
@@ -10,6 +12,8 @@ function Desktop() {
     <Stack spacing={12} id='desktop-view'>
       <Nav />
       <Top />
+      <Middle />
+      <Footer />
     </Stack>
   )
 }
