@@ -3,8 +3,19 @@ import { Box, Paper, Typography, Stack, Toolbar ,  createTheme, ThemeProvider, B
 import logo from '/src/images/logo.svg'
 
 function Nav() {
+
+  
+  const theme = createTheme({
+    palette:{
+        primary:{
+            main:'hsl(179, 100%, 42%)'
+        }
+    }
+})
+
+
   return (
-    <Box>
+    <Box  sx={{padding:'30px'}}> 
 
       <Toolbar>
 
@@ -31,7 +42,12 @@ function Nav() {
       >
 
       <Typography>Login</Typography>
-       <Button style={{textTransform:'none'}} variant='contained' disableElevation>Sign up</Button>
+
+      <ThemeProvider theme={theme}>
+        
+       <Button style={{textTransform:'none', color:'white'}} variant='contained' disableElevation>Sign up</Button>
+
+      </ThemeProvider>
 
       </Stack>
      

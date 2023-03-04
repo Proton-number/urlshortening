@@ -8,6 +8,10 @@ import Footer from './DesktopFooter/Footer'
 
 
 function Desktop() {
+
+    
+
+
   return (
     <Stack spacing={12} id='desktop-view'>
       <Nav />

@@ -5,28 +5,68 @@ import illustration from  '/src/images/illustration-working.svg'
 
 function Top() {
 
-
+   
+  const theme = createTheme({
+    palette:{
+        primary:{
+            main:'hsl(179, 100%, 42%)'
+        }
+    }
+})
 
 
   return (
    <Stack spacing={10}>
 
-     <Stack spacing={12} direction='row' sx={{alignItems:'center'}}>
+     <Stack  
+     spacing={12} 
+     direction='row' 
+     sx={{
+      alignItems:'center',
+       justifyContent:'center',
+       padding:{
+            sm: '50px'
+       }
+       }}>
      
-     <Stack spacing={2}>
+     <Stack spacing={2} >
 
-        <Typography variant='h3'>More than just shorter links</Typography>
+        <Typography 
+        variant='h1' 
+        sx={{
+          fontSize:{
+            sm:'44px'
+          },
+          fontWeight:{
+            sm: 800
+          }
+        }} 
+          >More than just shorter links</Typography>
 
-        <Typography variant='body1' >Build your brand's recognition and get detailed insights on how your links are performing.</Typography>
+        <Typography 
+        variant='body2'  
+        sx={{
+          fontSize:{
+            sm:'16px'
+          },
+          fontWeight:{
+            sm:600
+          }
+          }}
+          >Build your brand's recognition and get detailed insights on how your links are performing.</Typography>
 
-        <Button 
-        style={{textTransform:'none'}} 
+       <ThemeProvider theme={theme}>
+       <Button 
+        style={{textTransform:'none', color:'white'}} 
         variant='contained' 
-        sx={{width:'23%'}} 
+        sx={{width:{
+          sm:'45%'
+        }}} 
         disableElevation
         >
           Get Started
         </Button>
+       </ThemeProvider>
 
      </Stack>
 
@@ -36,6 +76,8 @@ function Top() {
         src={illustration} 
         sx={{
             width:{
+              sm: '340px', //600
+              md:'', //900
                 lg:'600px'
             }
             }} />
@@ -47,6 +89,10 @@ function Top() {
      <Stack 
      direction='row' 
      spacing={5} 
+     style={{
+      margin:'auto',
+      marginTop:'40px'
+     }}
      sx={{
       alignItems:'center', 
       justifyContent:'center', 
@@ -56,8 +102,13 @@ function Top() {
       borderRadius:'10px',
       backgroundSize:'cover',
       padding:{
-        lg:'3rem' //1200
-      }
+        sm: '3rem 2rem',
+        lg:'3rem 2rem' //1200
+      },
+      width:{
+        sm:'80%',
+        lg: '70%' //1200
+      },
       }}
       >
 
@@ -70,13 +121,24 @@ function Top() {
       placeholder='Shorten a link here...' 
       sx={{
         width:{
+          sm:'80%',
           lg: '60%' //1200
       },
       backgroundColor:'white',
       borderRadius:'25px'
       }} />
          
-         <Button style={{textTransform:'none'}} variant='contained' disableElevation>Shorten it!</Button>
+       <ThemeProvider theme={theme}>
+       <Button 
+       style={{textTransform:'none', color:'white'}} 
+       variant='contained' 
+       sx={{
+        width:{
+             sm:'18%'
+       }
+      }}
+       disableElevation>Shorten it!</Button>
+       </ThemeProvider>
 
      </Stack>
 
