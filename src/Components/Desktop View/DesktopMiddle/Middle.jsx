@@ -22,19 +22,65 @@ function Middle() {
   return (
    <>
 
-     <Stack spacing={8}>
+     <Stack spacing={8} >
 
 <Stack sx={{ alignItems:'center'}}>
     <Typography variant='h3'>Advanced Statistics</Typography>
 
-    <Typography variant='body1'>Track how your links are performing across the web with our advanced statistics dashboard.</Typography>
+    <Typography 
+    variant='body1' 
+    sx={{
+        textAlign:'center',
+         width:{
+            sm:'50%', //600
+            lg:'' //1200
+         }
+        }}
+    >Track how your links are performing across the web with our advanced statistics dashboard.</Typography>
 </Stack>
 
-<Stack direction='row' spacing={4} >
-    <Stack spacing={1} sx={{backgroundColor:'hsl(0, 0%, 100%)', color:'black'}} p={5}>
+<Stack 
+        direction='row' 
+        spacing={4} 
+    sx={{
+        padding:{
+            sm:'40px'
+        }
+    }}
+ >
+    <Stack 
+    spacing={1} 
+    sx={{
+        backgroundColor:'hsl(0, 0%, 100%)',
+         color:'black',
+         padding:{
+            sm:'30px'
+         }
+         }} >
 
-        <Box sx={{backgroundColor:'hsl(260, 27%, 26%)', width:'15%', display:'flex', justifyContent:'center', padding:'10px', borderRadius:'50%'}}>
-        <Box component='img' src={brand} sx={{marginBottom:'5px'}}  />
+        <Box 
+        sx={{
+            backgroundColor:'hsl(260, 27%, 26%)', 
+            width:{
+                sm:'20%'
+            }, 
+            display:'flex', 
+            justifyContent:'center', 
+            padding:{
+                sm:'15px'
+            }, 
+            borderRadius:'80%'
+            }}
+            >
+        <Box 
+        component='img' 
+        src={brand} 
+        sx={{
+            marginBottom:'5px',
+            width:{
+                sm:'25px'
+            }
+             }}  />
         </Box>
 
 
@@ -43,23 +89,79 @@ function Middle() {
 
     </Stack>
 
-    <Stack spacing={1} sx={{backgroundColor:'hsl(0, 0%, 100%)', color:'black'}} p={5}>
-
-    <Box sx={{backgroundColor:'hsl(260, 27%, 26%)', width:'15%', display:'flex', justifyContent:'center', padding:'10px', borderRadius:'50%'}}>
-        <Box component='img' src={detailed} sx={{marginBottom:'5px'}}  />
+    <Stack 
+    spacing={1} 
+     sx={{
+        backgroundColor:'hsl(0, 0%, 100%)',
+         color:'black',
+         padding:{
+            sm:'30px'
+         }
+         }} 
+    >
+  <Box 
+        sx={{
+            backgroundColor:'hsl(260, 27%, 26%)', 
+            width:{
+                sm:'20%'
+            }, 
+            display:'flex', 
+            justifyContent:'center', 
+            padding:{
+                sm:'15px'
+            }, 
+            borderRadius:'80%'
+            }}
+            >
+        <Box 
+        component='img' 
+        src={detailed} 
+        sx={{
+            width:{
+                sm:'25px'
+            }
+             }}  />
         </Box>
 
-                    
 
         <Typography variant='h5'>Detailed Records</Typography>
         <Typography variant='subtitle2' sx={{opacity:'70%'}} >Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</Typography>
     </Stack>
 
-    <Stack spacing={1} sx={{backgroundColor:'hsl(0, 0%, 100%)', color:'black'}} p={5}>
-
-    <Box sx={{backgroundColor:'hsl(260, 27%, 26%)', width:'15%', display:'flex', justifyContent:'center', padding:'10px', borderRadius:'50%'}}>
-        <Box component='img' src={fullyCustomizable} sx={{marginBottom:'5px'}}  />
+    <Stack 
+    spacing={1} 
+    sx={{
+        backgroundColor:'hsl(0, 0%, 100%)',
+         color:'black',
+         padding:{
+            sm:'30px'
+         }
+         }} 
+    >
+     <Box 
+        sx={{
+            backgroundColor:'hsl(260, 27%, 26%)', 
+            width:{
+                sm:'20%'
+            }, 
+            display:'flex', 
+            justifyContent:'center', 
+            padding:{
+                sm:'15px'
+            }, 
+            borderRadius:'80%'
+            }}
+            >
+        <Box 
+        component='img' 
+        src={fullyCustomizable} 
+        sx={{
+            width:{
+                sm:'25px'
+            }
+             }}  />
         </Box>
+
 
    
 
@@ -77,7 +179,7 @@ function Middle() {
              backgroundRepeat:'no-repeat',
              borderRadius:'10px',
              backgroundSize:'cover',
-             padding:'20px'
+             padding:'50px'
         }}
         spacing={2}
         >

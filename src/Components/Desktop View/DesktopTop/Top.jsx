@@ -60,7 +60,8 @@ function Top() {
         style={{textTransform:'none', color:'white'}} 
         variant='contained' 
         sx={{width:{
-          sm:'45%'
+          sm:'45%', //600
+          lg:'16%' //1200
         }}} 
         disableElevation
         >
