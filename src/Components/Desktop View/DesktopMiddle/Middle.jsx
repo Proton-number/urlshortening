@@ -24,7 +24,7 @@ function Middle() {
 
      <Stack spacing={8} >
 
-<Stack sx={{ alignItems:'center'}}>
+<Stack sx={{ alignItems:'center'}} spacing={2}>
     <Typography variant='h3'>Advanced Statistics</Typography>
 
     <Typography 
@@ -33,7 +33,7 @@ function Middle() {
         textAlign:'center',
          width:{
             sm:'50%', //600
-            lg:'' //1200
+            lg:'30%' //1200
          }
         }}
     >Track how your links are performing across the web with our advanced statistics dashboard.</Typography>

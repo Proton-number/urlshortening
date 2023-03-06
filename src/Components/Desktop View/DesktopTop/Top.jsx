@@ -19,7 +19,7 @@ function Top() {
    <Stack spacing={10}>
 
      <Stack  
-     spacing={12} 
+     spacing={1} 
      direction='row' 
      sx={{
       alignItems:'center',
@@ -35,10 +35,14 @@ function Top() {
         variant='h1' 
         sx={{
           fontSize:{
-            sm:'44px'
+            sm:'44px',
+            lg:'50px'
           },
           fontWeight:{
             sm: 800
+          },
+          width:{
+            lg: '90%'
           }
         }} 
           >More than just shorter links</Typography>
@@ -47,10 +51,14 @@ function Top() {
         variant='body2'  
         sx={{
           fontSize:{
-            sm:'16px'
+            sm:'16px',
+            lg:'14px'
           },
           fontWeight:{
             sm:600
+          },
+          width:{
+            lg:'70%'
           }
           }}
           >Build your brand's recognition and get detailed insights on how your links are performing.</Typography>
@@ -59,9 +67,10 @@ function Top() {
        <Button 
         style={{textTransform:'none', color:'white'}} 
         variant='contained' 
-        sx={{width:{
+        sx={{
+          width:{
           sm:'45%', //600
-          lg:'16%' //1200
+          lg:'17%' //1200
         }}} 
         disableElevation
         >

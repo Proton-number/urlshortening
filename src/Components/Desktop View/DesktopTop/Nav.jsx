@@ -15,7 +15,12 @@ function Nav() {
 
 
   return (
-    <Box  sx={{padding:'30px'}}> 
+    <Box  sx={{
+      padding:{
+        sm: '30px', //600
+        lg: '46px'
+      }
+      }}> 
 
       <Toolbar>
 

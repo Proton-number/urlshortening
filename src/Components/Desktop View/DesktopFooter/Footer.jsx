@@ -10,13 +10,29 @@ import twitter from '/src/images/icon-twitter.svg'
 
 function Footer() {
   return (
-    <Stack direction='row' spacing={30} sx={{alignItems:'center'}}>
+    <Stack 
+    direction='row'  
+    spacing={{
+        sm: 6.4
+    }} 
+    sx={{
+        alignItems:'center',
+        padding:{
+            sm:4
+        }
+    }}
+    >
 
         <Box>
             <Box component='img' src={logo} />
         </Box>
 
-        <Stack direction='row' spacing={10}>
+        <Stack 
+        direction='row' 
+        spacing={{
+            sm: 6 ,//600
+        }}
+        >
 
             <Stack spacing={1}> 
                 <Typography variant='h6'>Features</Typography>
@@ -42,7 +58,7 @@ function Footer() {
 
         </Stack>
 
-        <Stack spacing={3} direction='row'>
+        <Stack spacing={2} direction='row'>
         <Box component='img' src={facebook} sx={{width:'20px', height:'20px'}} />
         <Box component='img' src={twitter} sx={{width:'20px',height:'20px'}}/>
         <Box component='img' src={pinterest} sx={{width:'20px',height:'20px'}}/>
