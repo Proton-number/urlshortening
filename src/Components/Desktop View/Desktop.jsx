@@ -5,6 +5,7 @@ import Nav from './DesktopTop/Nav'
 import Top from './DesktopTop/Top'
 import Middle from './DesktopMiddle/Middle'
 import Footer from './DesktopFooter/Footer'
+import Boost from './DesktopBoost/Boost'
 
 
 function Desktop() {
@@ -17,6 +18,7 @@ function Desktop() {
       <Nav />
       <Top />
       <Middle />
+      <Boost />
       <Footer />
     </Stack>
   )

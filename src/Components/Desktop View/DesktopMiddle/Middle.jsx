@@ -25,10 +25,10 @@ function Middle() {
      <Stack spacing={8} >
 
 <Stack sx={{ alignItems:'center'}} spacing={2}>
-    <Typography variant='h3'>Advanced Statistics</Typography>
+    <Typography variant='h5'>Advanced Statistics</Typography>
 
     <Typography 
-    variant='body1' 
+    variant='subtitle2' 
     sx={{
         textAlign:'center',
          width:{
@@ -39,15 +39,25 @@ function Middle() {
     >Track how your links are performing across the web with our advanced statistics dashboard.</Typography>
 </Stack>
 
+<Box sx={{position:'relative'}}>
+    
+
+
+    
 <Stack 
         direction='row' 
         spacing={4} 
     sx={{
         padding:{
             sm:'40px'
-        }
+        },
+        position:'absolute',
+        zIndex:1
     }}
  >
+
+
+
     <Stack 
     spacing={1} 
     sx={{
@@ -58,6 +68,7 @@ function Middle() {
          }
          }} >
 
+         
         <Box 
         sx={{
             backgroundColor:'hsl(260, 27%, 26%)', 
@@ -169,33 +180,30 @@ function Middle() {
         <Typography variant='subtitle2' sx={{opacity:'70%'}}>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</Typography>
     </Stack>
 
+
 </Stack>
 
-<Stack
-        sx={{
-            alignItems:'center',
-            backgroundColor:'hsl(260, 27%, 26%)',
-             backgroundImage:'url(/src/images/bg-boost-desktop.svg)',
-             backgroundRepeat:'no-repeat',
-             borderRadius:'10px',
-             backgroundSize:'cover',
-             padding:'50px'
-        }}
-        spacing={2}
-        >
+<Box 
+style={{
+    backgroundColor:'hsl(180deg, 66%, 49%)', 
+    height:'6px',
+     borderRadius:'10px',
+     }}
+     sx={{
+        transform: {
+            sm: 'translateY(14em)',
+            lg: 'translateY(12em)'
+        },
+        width:'68%'
+     }}
+  />
 
-            <Typography variant='h4'>Boost your links today</Typography>
+{/* <Box variant='div' style={{height:'4px', backgroundColor:'hsl(180deg, 66%, 49%)', borderRadius:'10px', width:'71%'}} /> */}
 
-               <ThemeProvider theme={theme}>
 
-               <Button
-        style={{textTransform:'none', color:'white'}} 
-                variant='contained' 
-               >Get Started</Button>
+</Box>
 
-               </ThemeProvider>
 
-        </Stack>
 
 </Stack>
 
