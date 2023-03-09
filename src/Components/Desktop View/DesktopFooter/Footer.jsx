@@ -19,6 +19,10 @@ function Footer() {
     }
 })
 
+const styles ={
+    backgroundImage:'url(/src/images/bg-boost-desktop.svg)',
+}
+
   return (
    <>
        
@@ -26,7 +30,6 @@ function Footer() {
         sx={{
             alignItems:'center',
             backgroundColor:'hsl(260, 27%, 26%)',
-             backgroundImage:'url(/src/images/bg-boost-desktop.svg)',
              backgroundRepeat:'no-repeat',
              backgroundSize:'cover',
              padding:'4rem',
@@ -36,6 +39,7 @@ function Footer() {
                 md:'80px'
              }
         }}
+        style={styles}
         spacing={2}
         >
 

@@ -14,6 +14,12 @@ function Top() {
     }
 })
 
+  const styles={
+    margin:'auto',
+    marginTop:'40px',
+    marginBottom:'120px',
+    backgroundImage:'url(/src/images/bg-shorten-desktop.svg)',
+  }
 
   return (
    <Stack spacing={10}  >
@@ -102,16 +108,11 @@ function Top() {
      <Stack 
      direction='row' 
      spacing={5} 
-     style={{
-      margin:'auto',
-      marginTop:'40px',
-      marginBottom:'120px'
-     }}
+     style={styles}
      sx={{
       alignItems:'center', 
       justifyContent:'center', 
       backgroundColor:'hsl(260, 27%, 26%)',
-      backgroundImage:'url(/src/images/bg-shorten-desktop.svg)',
       backgroundRepeat:'no-repeat',
       borderRadius:'10px',
       backgroundSize:'cover',
@@ -149,7 +150,7 @@ function Top() {
        sx={{
         width:{
              sm:'18%',
-             lg:'9.1%'
+             lg:'9.4%'
        }
       }}
        disableElevation>Shorten it!</Button>
