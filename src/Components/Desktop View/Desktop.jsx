@@ -5,7 +5,6 @@ import Nav from './DesktopTop/Nav'
 import Top from './DesktopTop/Top'
 import Middle from './DesktopMiddle/Middle'
 import Footer from './DesktopFooter/Footer'
-import Boost from './DesktopBoost/Boost'
 
 
 function Desktop() {
@@ -14,11 +13,10 @@ function Desktop() {
 
 
   return (
-    <Stack spacing={12} id='desktop-view'>
+    <Stack id='desktop-view'>
       <Nav />
       <Top />
       <Middle />
-      <Boost />
       <Footer />
     </Stack>
   )

@@ -22,10 +22,10 @@ function Middle() {
   return (
    <>
 
-     <Stack spacing={8} >
+     <Stack>
 
 <Stack sx={{ alignItems:'center'}} spacing={2}>
-    <Typography variant='h5'>Advanced Statistics</Typography>
+    <Typography variant='h4'>Advanced Statistics</Typography>
 
     <Typography 
     variant='subtitle2' 
@@ -39,7 +39,7 @@ function Middle() {
     >Track how your links are performing across the web with our advanced statistics dashboard.</Typography>
 </Stack>
 
-<Box sx={{position:'relative'}}>
+<Box >
     
 
 
@@ -49,11 +49,11 @@ function Middle() {
         spacing={4} 
     sx={{
         padding:{
-            sm:'40px'
-        },
-        position:'absolute',
-        zIndex:1
+            sm:'40px',
+            lg:'9rem'
+        }
     }}
+    className='desktop-boxes'
  >
 
 
@@ -64,8 +64,11 @@ function Middle() {
         backgroundColor:'hsl(0, 0%, 100%)',
          color:'black',
          padding:{
-            sm:'30px'
-         }
+            sm:'30px',
+            lg:'2.3rem 1rem 2rem 1.5rem'
+         },
+         position:'relative',
+         borderRadius:'2rem'
          }} >
 
          
@@ -73,14 +76,21 @@ function Middle() {
         sx={{
             backgroundColor:'hsl(260, 27%, 26%)', 
             width:{
-                sm:'20%'
+                sm:'14%',
+                lg:'6.8%'
             }, 
             display:'flex', 
             justifyContent:'center', 
             padding:{
-                sm:'15px'
+                sm:'12px'
             }, 
-            borderRadius:'80%'
+            borderRadius:'80%',
+            position: 'absolute',
+            bottom:{
+                sm:'280px',
+                md:'220px',
+                lg:'170px'
+            }
             }}
             >
         <Box 
@@ -89,8 +99,11 @@ function Middle() {
         sx={{
             marginBottom:'5px',
             width:{
-                sm:'25px'
-            }
+                sm:'62%',
+                md:'74%',
+                lg:'22px'
+            },
+           
              }}  />
         </Box>
 
@@ -106,7 +119,13 @@ function Middle() {
         backgroundColor:'hsl(0, 0%, 100%)',
          color:'black',
          padding:{
-            sm:'30px'
+            sm:'30px',
+            lg:'2.5rem 1rem 2rem 1.5rem'
+         },
+         position:'relative',
+         borderRadius:'2rem',
+         transform:{
+            sm:'translateY(10%)'
          }
          }} 
     >
@@ -114,14 +133,21 @@ function Middle() {
         sx={{
             backgroundColor:'hsl(260, 27%, 26%)', 
             width:{
-                sm:'20%'
+                sm:'10%',
+                lg:'6%'
             }, 
             display:'flex', 
             justifyContent:'center', 
             padding:{
                 sm:'15px'
             }, 
-            borderRadius:'80%'
+            borderRadius:'80%',
+            position: 'absolute',
+            bottom:{
+                sm: '280px',
+                md:'230px',
+                lg:'170px'
+            }
             }}
             >
         <Box 
@@ -129,7 +155,8 @@ function Middle() {
         src={detailed} 
         sx={{
             width:{
-                sm:'25px'
+                sm:'82%',
+                md:'95%',
             }
              }}  />
         </Box>
@@ -145,7 +172,13 @@ function Middle() {
         backgroundColor:'hsl(0, 0%, 100%)',
          color:'black',
          padding:{
-            sm:'30px'
+            sm:'30px',
+            lg:'2.6rem 1rem 2rem 1.5rem'
+         },
+         position:'relative',
+         borderRadius:'2rem',
+         transform:{
+            sm:'translateY(26%)'
          }
          }} 
     >
@@ -153,14 +186,21 @@ function Middle() {
         sx={{
             backgroundColor:'hsl(260, 27%, 26%)', 
             width:{
-                sm:'20%'
+                sm:'10%',
+                lg:'6.8%'
             }, 
             display:'flex', 
             justifyContent:'center', 
             padding:{
                 sm:'15px'
             }, 
-            borderRadius:'80%'
+            borderRadius:'80%',
+            position: 'absolute',
+            bottom:{
+                sm:'280px',
+                md:'226px',
+                lg:'170px'
+            }
             }}
             >
         <Box 
@@ -168,7 +208,8 @@ function Middle() {
         src={fullyCustomizable} 
         sx={{
             width:{
-                sm:'25px'
+                sm:'88%',
+                md:'100%',
             }
              }}  />
         </Box>
@@ -182,24 +223,6 @@ function Middle() {
 
 
 </Stack>
-
-<Box 
-style={{
-    backgroundColor:'hsl(180deg, 66%, 49%)', 
-    height:'6px',
-     borderRadius:'10px',
-     }}
-     sx={{
-        transform: {
-            sm: 'translateY(14em)',
-            lg: 'translateY(12em)'
-        },
-        width:'68%'
-     }}
-  />
-
-{/* <Box variant='div' style={{height:'4px', backgroundColor:'hsl(180deg, 66%, 49%)', borderRadius:'10px', width:'71%'}} /> */}
-
 
 </Box>
 

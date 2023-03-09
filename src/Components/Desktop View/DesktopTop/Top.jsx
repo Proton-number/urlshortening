@@ -16,7 +16,7 @@ function Top() {
 
 
   return (
-   <Stack spacing={10}>
+   <Stack spacing={10}  >
 
      <Stack  
      spacing={1} 
@@ -36,6 +36,7 @@ function Top() {
         sx={{
           fontSize:{
             sm:'44px',
+            md:'22px',
             lg:'50px'
           },
           fontWeight:{
@@ -58,6 +59,7 @@ function Top() {
             sm:600
           },
           width:{
+            md:'80%',
             lg:'70%'
           }
           }}
@@ -70,6 +72,7 @@ function Top() {
         sx={{
           width:{
           sm:'45%', //600
+          md:'30%', //900
           lg:'17%' //1200
         }}} 
         disableElevation
@@ -87,8 +90,8 @@ function Top() {
         sx={{
             width:{
               sm: '340px', //600
-              md:'', //900
-                lg:'600px'
+              md:'330px', //900
+                lg:'420px'
             }
             }} />
 
@@ -101,7 +104,8 @@ function Top() {
      spacing={5} 
      style={{
       margin:'auto',
-      marginTop:'40px'
+      marginTop:'40px',
+      marginBottom:'120px'
      }}
      sx={{
       alignItems:'center', 
@@ -144,7 +148,8 @@ function Top() {
        variant='contained' 
        sx={{
         width:{
-             sm:'18%'
+             sm:'18%',
+             lg:'9.1%'
        }
       }}
        disableElevation>Shorten it!</Button>

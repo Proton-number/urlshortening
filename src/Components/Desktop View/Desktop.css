@@ -2,6 +2,23 @@
     display: none;
 }
 
+.desktop-boxes{
+    position: relative;
+}
+
+.desktop-boxes::after{
+     content: '';
+     position: absolute;
+     height: 8px;
+     width: 60%;
+     top: 50%;
+    background-color: hsl(180deg, 66%, 49%);
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    margin: auto;
+}
 
 
 @media screen and (min-width:600px) {

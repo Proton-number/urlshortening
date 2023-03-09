@@ -9,17 +9,63 @@ import twitter from '/src/images/icon-twitter.svg'
 
 
 function Footer() {
+
+     
+  const theme = createTheme({
+    palette:{
+        primary:{
+            main:'hsl(179, 100%, 42%)'
+        }
+    }
+})
+
   return (
-    <Stack 
+   <>
+       
+<Stack
+        sx={{
+            alignItems:'center',
+            backgroundColor:'hsl(260, 27%, 26%)',
+             backgroundImage:'url(/src/images/bg-boost-desktop.svg)',
+             backgroundRepeat:'no-repeat',
+             backgroundSize:'cover',
+             padding:'4rem',
+             position:'inherit',
+             marginTop:{
+                sm:'80px',
+                md:'80px'
+             }
+        }}
+        spacing={2}
+        >
+
+            <Typography variant='h4' sx={{color:'white'}} >Boost your links today</Typography>
+
+               <ThemeProvider theme={theme}>
+
+               <Button
+        style={{textTransform:'none', color:'white'}} 
+                variant='contained' 
+               >Get Started</Button>
+
+               </ThemeProvider>
+
+        </Stack>   
+
+
+ <Stack 
     direction='row'  
     spacing={{
-        sm: 6.4
+        sm: 7,
+        lg: 40
     }} 
     sx={{
         alignItems:'center',
         padding:{
             sm:4
-        }
+        },
+        backgroundColor:'black',
+        color:'white'
     }}
     >
 
@@ -30,7 +76,9 @@ function Footer() {
         <Stack 
         direction='row' 
         spacing={{
-            sm: 6 ,//600
+            sm: 7.2 ,//600
+            md: 12 , //900
+            lg: 20 //1200
         }}
         >
 
@@ -66,6 +114,10 @@ function Footer() {
         </Stack>
       
     </Stack>
+
+
+
+   </>
   )
 }
 

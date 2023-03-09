@@ -18,8 +18,8 @@ function Nav() {
     <Box  sx={{
       padding:{
         sm: '30px', //600
-        lg: '46px'
-      }
+        lg: '46px' 
+      },
       }}> 
 
       <Toolbar>
@@ -27,7 +27,7 @@ function Nav() {
     <Stack
     direction='row'
     spacing={4}
-    sx={{flexGrow:3, alignItems:'center' }} 
+    sx={{flexGrow:1, alignItems:'center' }} 
     >
 
       <Box component='img' src={logo} />
