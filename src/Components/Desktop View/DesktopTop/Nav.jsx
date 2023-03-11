@@ -50,7 +50,7 @@ function Nav() {
 
       <ThemeProvider theme={theme}>
         
-       <Button style={{textTransform:'none', color:'white'}} variant='contained' disableElevation>Sign up</Button>
+       <Button style={{textTransform:'none', color:'white'}}  variant='contained' disableElevation>Sign up</Button>
 
       </ThemeProvider>
 

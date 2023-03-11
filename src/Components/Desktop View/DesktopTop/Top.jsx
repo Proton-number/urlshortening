@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Paper, Typography, Stack, TextField,  createTheme, ThemeProvider, Button } from '@mui/material'
 import illustration from  '/src/images/illustration-working.svg'
-
+import bgShorten from '/src/images/bg-shorten-desktop.svg'
 
 function Top() {
 
@@ -14,12 +14,6 @@ function Top() {
     }
 })
 
-  const styles={
-    margin:'auto',
-    marginTop:'40px',
-    marginBottom:'120px',
-    backgroundImage:'url(/src/images/bg-shorten-desktop.svg)',
-  }
 
   return (
    <Stack spacing={10}  >
@@ -108,7 +102,12 @@ function Top() {
      <Stack 
      direction='row' 
      spacing={5} 
-     style={styles}
+     style={{
+      margin:'auto',
+      marginTop:'40px',
+      marginBottom:'120px',
+      backgroundImage:`url(${bgShorten})`,
+     }}
      sx={{
       alignItems:'center', 
       justifyContent:'center', 

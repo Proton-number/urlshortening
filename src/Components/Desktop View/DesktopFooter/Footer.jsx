@@ -5,7 +5,7 @@ import facebook from '/src/images/icon-facebook.svg'
 import instagram from '/src/images/icon-instagram.svg'
 import pinterest from '/src/images/icon-pinterest.svg'
 import twitter from '/src/images/icon-twitter.svg'
-
+ import bgBoost from '/src/images/bg-boost-desktop.svg'
 
 
 function Footer() {
@@ -19,9 +19,6 @@ function Footer() {
     }
 })
 
-const styles ={
-    backgroundImage:'url(/src/images/bg-boost-desktop.svg)',
-}
 
   return (
    <>
@@ -39,7 +36,9 @@ const styles ={
                 md:'80px'
              }
         }}
-        style={styles}
+        style={{
+         backgroundImage:`url(${bgBoost})`
+        }}
         spacing={2}
         >
 
