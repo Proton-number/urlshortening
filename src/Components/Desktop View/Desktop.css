@@ -21,6 +21,11 @@
 }
 
 
+#footer-img:hover{
+    filter: invert(75%) sepia(100%) saturate(463%) hue-rotate(115deg) brightness(86%) contrast(98%);
+}
+
+
 @media screen and (min-width:600px) {
     
     #desktop-view{

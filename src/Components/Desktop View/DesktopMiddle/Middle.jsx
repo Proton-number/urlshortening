@@ -76,8 +76,9 @@ function Middle() {
         sx={{
             backgroundColor:'hsl(260, 27%, 26%)', 
             width:{
-                sm:'14%',
-                lg:'6.8%'
+                sm:'13%',
+                lg:'6.8%',
+                custom:'12%'
             }, 
             display:'flex', 
             justifyContent:'center', 
@@ -87,9 +88,10 @@ function Middle() {
             borderRadius:'80%',
             position: 'absolute',
             bottom:{
-                sm:'280px',
+                sm:'290px',
                 md:'220px',
-                lg:'170px'
+                lg:'170px',
+                custom:'230px'
             }
             }}
             >
@@ -99,9 +101,10 @@ function Middle() {
         sx={{
             marginBottom:'5px',
             width:{
-                sm:'62%',
+                sm:'60%',
                 md:'74%',
-                lg:'22px'
+                lg:'22px',
+                custom:'76%'
             },
            
              }}  />
@@ -144,9 +147,10 @@ function Middle() {
             borderRadius:'80%',
             position: 'absolute',
             bottom:{
-                sm: '280px',
+                sm: '294px',
                 md:'230px',
-                lg:'170px'
+                lg:'170px' ,
+                custom:'234px'
             }
             }}
             >
@@ -197,9 +201,10 @@ function Middle() {
             borderRadius:'80%',
             position: 'absolute',
             bottom:{
-                sm:'280px',
+                sm:'290px',
                 md:'226px',
-                lg:'170px'
+                lg:'170px',
+                custom:'230px'
             }
             }}
             >
@@ -208,8 +213,8 @@ function Middle() {
         src={fullyCustomizable} 
         sx={{
             width:{
-                sm:'88%',
-                md:'100%',
+                sm:'88%', //600
+                md:'100%', //1200
             }
              }}  />
         </Box>

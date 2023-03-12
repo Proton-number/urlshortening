@@ -1,6 +1,9 @@
 import React from 'react'
 import { Box, Paper, Typography, Stack, Toolbar ,  createTheme, ThemeProvider, Button } from '@mui/material'
 import logo from '/src/images/logo.svg'
+import { motion } from 'framer-motion'
+
+
 
 function Nav() {
 
@@ -32,11 +35,11 @@ function Nav() {
 
       <Box component='img' src={logo} />
     
-     <Typography>Features</Typography>
+     <Typography component={motion.h1} whileHover={{color:'hsl(179, 100%, 42%)'}} >Features</Typography>
 
-     <Typography>Pricing</Typography>
+     <Typography component={motion.h1} whileHover={{color:'hsl(179, 100%, 42%)'}}>Pricing</Typography>
 
-     <Typography>Resources</Typography>
+     <Typography component={motion.h1} whileHover={{color:'hsl(179, 100%, 42%)'}}>Resources</Typography>
 
     </Stack>
      
@@ -46,7 +49,7 @@ function Nav() {
         sx={{alignItems:'baseline'}} 
       >
 
-      <Typography>Login</Typography>
+      <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  >Login</Typography>
 
       <ThemeProvider theme={theme}>
         
