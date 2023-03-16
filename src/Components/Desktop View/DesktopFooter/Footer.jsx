@@ -48,6 +48,8 @@ function Footer() {
                <ThemeProvider theme={theme}>
 
                <Button
+                component={motion.button}
+                whileHover={{scale:1.1}}
         style={{textTransform:'none', color:'white'}} 
                 variant='contained' 
                >Get Started</Button>
@@ -60,8 +62,9 @@ function Footer() {
  <Stack 
     direction='row'  
     spacing={{
-        sm: 3,
-        lg: 40
+        sm: 4,
+        lg: 40,
+        custom: 7
     }} 
     sx={{
         alignItems:'center',
@@ -80,9 +83,10 @@ function Footer() {
         <Stack 
         direction='row' 
         spacing={{
-            sm: 7 ,//600
+            sm: 10 ,//600
             md: 12 , //900
-            lg: 20 //1200
+            lg: 20, //1200
+            custom: 10
         }}
         >
 

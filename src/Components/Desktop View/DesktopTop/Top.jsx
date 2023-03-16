@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Box, Paper, Typography, Stack, TextField,  createTheme, ThemeProvider, Button } from '@mui/material'
 import illustration from  '/src/images/illustration-working.svg'
 import bgShorten from '/src/images/bg-shorten-desktop.svg'
+import { motion } from 'framer-motion'
+
 
 function Top() {
+  const [texts, setTexts] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+
 
    
   const theme = createTheme({
@@ -13,6 +18,13 @@ function Top() {
         }
     }
 })
+
+      const shortenHandler = () => {
+        if (inputValue !== "") {
+          setTexts([...texts, inputValue]);
+          setInputValue("");
+        }
+      }
 
 
   return (
@@ -67,6 +79,8 @@ function Top() {
 
        <ThemeProvider theme={theme}>
        <Button 
+       component={motion.button}
+       whileHover={{scale:1.1}}
         style={{textTransform:'none', color:'white'}} 
         variant='contained' 
         sx={{
@@ -99,13 +113,14 @@ function Top() {
 
      {/* INPUTFIELDS!!!!!! */}
 
-     <Stack 
+<Box>
+<Stack 
      direction='row' 
      spacing={5} 
      style={{
       margin:'auto',
       marginTop:'40px',
-      marginBottom:'120px',
+      marginBottom:'50px',
       backgroundImage:`url(${bgShorten})`,
      }}
      sx={{
@@ -125,8 +140,13 @@ function Top() {
       },
       }}
       >
+        
+        
 
       <TextField 
+      type="url"
+     onChange={(e) => setInputValue(e.target.value)} 
+     value={inputValue}
       InputProps={{
         style:{
           borderRadius:'25px'
@@ -144,18 +164,73 @@ function Top() {
          
        <ThemeProvider theme={theme}>
        <Button 
+       component={motion.button}
+       whileHover={{scale:1.1}}
+       onClick={shortenHandler}
        style={{textTransform:'none', color:'white'}} 
        variant='contained' 
        sx={{
         width:{
              sm:'18%',
              lg:'9.4%'
-       }
+        }
       }}
        disableElevation>Shorten it!</Button>
        </ThemeProvider>
-
      </Stack>
+
+ {/* LINKSSSS */}
+
+      
+      {texts.map((text, index) => (
+        <>
+          <Stack 
+          key={index}
+        spacing={1}
+         sx={{
+         margin:'auto',
+          backgroundColor:'white',
+          alignItems:'center', 
+          justifyContent:'space-between',
+          marginBottom:'40px',
+          padding:{
+            sm: '10px',
+            lg:'15px' //1200
+          },
+          width:{
+            sm:'80%',
+            lg: '52%' //1200
+          },
+        }}
+        direction='row'
+        >
+
+      <Typography variant='body2'> {text} </Typography>
+
+     <Stack direction='row' spacing={4} sx={{alignItems:'baseline'}} > 
+     <Typography variant='body2'>This is the shortened link</Typography>
+
+      <ThemeProvider theme={theme}>
+ <Button 
+ style={{textTransform:'none', color:'white'}} 
+ variant='contained' 
+ sx={{
+  width:{
+       sm:'4%',
+       lg:'4%'
+ }
+}}
+ disableElevation>Copy</Button>
+ </ThemeProvider>
+
+      </Stack>  
+     
+     </Stack>
+        </>
+      ))}
+      
+</Box>
+   
 
 
    </Stack>

@@ -20,7 +20,7 @@ function Nav() {
   return (
     <Box  sx={{
       padding:{
-        sm: '30px', //600
+        sm: '10px', //600
         lg: '46px' 
       },
       }}> 
@@ -53,7 +53,8 @@ function Nav() {
 
       <ThemeProvider theme={theme}>
         
-       <Button style={{textTransform:'none', color:'white'}}  variant='contained' disableElevation>Sign up</Button>
+       <Button  component={motion.button}
+       whileHover={{scale:1.1}} style={{textTransform:'none', color:'white'}}  variant='contained' disableElevation>Sign up</Button>
 
       </ThemeProvider>
 

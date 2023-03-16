@@ -3,6 +3,7 @@ import { Box,  Typography, Stack,  createTheme, ThemeProvider, Button } from '@m
 import brand from '/src/images/icon-brand-recognition.svg'
 import detailed from '/src/images/icon-detailed-records.svg'
 import fullyCustomizable from '/src/images/icon-fully-customizable.svg'
+import { motion } from 'framer-motion'
 
 
 
@@ -22,7 +23,7 @@ function Middle() {
   return (
    <>
 
-     <Stack>
+     <Stack spacing={10}>
 
 <Stack sx={{ alignItems:'center'}} spacing={2}>
     <Typography variant='h4'>Advanced Statistics</Typography>
@@ -59,6 +60,10 @@ function Middle() {
 
 
     <Stack 
+    component={motion.div}
+    initial={{y:-30}}
+    whileInView={{y:0}}
+    transition={{delay:.2}}
     spacing={1} 
     sx={{
         backgroundColor:'hsl(0, 0%, 100%)',
@@ -88,7 +93,7 @@ function Middle() {
             borderRadius:'80%',
             position: 'absolute',
             bottom:{
-                sm:'290px',
+                sm:'284px',
                 md:'220px',
                 lg:'170px',
                 custom:'230px'
@@ -101,7 +106,7 @@ function Middle() {
         sx={{
             marginBottom:'5px',
             width:{
-                sm:'60%',
+                sm:'70%',
                 md:'74%',
                 lg:'22px',
                 custom:'76%'
@@ -117,6 +122,10 @@ function Middle() {
     </Stack>
 
     <Stack 
+     component={motion.div}
+     initial={{y:60}}
+     whileInView={{y:0}}
+     transition={{delay:.2}}
     spacing={1} 
      sx={{
         backgroundColor:'hsl(0, 0%, 100%)',
@@ -147,7 +156,7 @@ function Middle() {
             borderRadius:'80%',
             position: 'absolute',
             bottom:{
-                sm: '294px',
+                sm: '285px',
                 md:'230px',
                 lg:'170px' ,
                 custom:'234px'
@@ -159,7 +168,7 @@ function Middle() {
         src={detailed} 
         sx={{
             width:{
-                sm:'82%',
+                sm:'84%',
                 md:'95%',
             }
              }}  />
@@ -171,6 +180,10 @@ function Middle() {
     </Stack>
 
     <Stack 
+     component={motion.div}
+     initial={{y:-30}}
+     whileInView={{y:0}}
+     transition={{delay:.2}}
     spacing={1} 
     sx={{
         backgroundColor:'hsl(0, 0%, 100%)',
@@ -187,6 +200,7 @@ function Middle() {
          }} 
     >
      <Box 
+        
         sx={{
             backgroundColor:'hsl(260, 27%, 26%)', 
             width:{
@@ -201,7 +215,7 @@ function Middle() {
             borderRadius:'80%',
             position: 'absolute',
             bottom:{
-                sm:'290px',
+                sm:'280px',
                 md:'226px',
                 lg:'170px',
                 custom:'230px'
