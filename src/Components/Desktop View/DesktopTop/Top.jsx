@@ -1,14 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Box, Paper, Typography, Stack, TextField,  createTheme, ThemeProvider, Button } from '@mui/material'
 import illustration from  '/src/images/illustration-working.svg'
 import bgShorten from '/src/images/bg-shorten-desktop.svg'
 import { motion } from 'framer-motion'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import axios from 'axios'
 
 
 function Top() {
   const [texts, setTexts] = useState([]);
+  const [shortenedLink, setShortenedLink] = useState('')
   const [inputValue, setInputValue] = useState('');
-
+  const [copied, setCopied] = useState(false)
+  const [buttonShortener, setButtonShortener] = useState('');
+  // const [isLoading, setIsLoading] = useState(true)
 
    
   const theme = createTheme({
@@ -24,8 +29,37 @@ function Top() {
           setTexts([...texts, inputValue]);
           setInputValue("");
         }
+        setButtonShortener(shortenedLink)
       }
 
+      const handleCopy = () => {
+        setCopied(true);
+        setTimeout(() => {
+         setCopied(false)
+        }, 1500);
+      }
+
+      const fetchData = async () => {
+        try{
+         const res = await axios.get(`https://api.shrtco.de/v2/shorten?url=${inputValue}`);
+         setShortenedLink(res.data.result.full_short_link)
+        } catch(err){
+         console.log(err)
+        } 
+      }
+      useEffect(()=>{
+        if(inputValue.length){
+          fetchData()
+        }
+      },[inputValue])
+
+
+    
+
+     
+
+
+      console.log(shortenedLink)
 
   return (
    <Stack spacing={10}  >
@@ -208,10 +242,16 @@ function Top() {
       <Typography variant='body2'> {text} </Typography>
 
      <Stack direction='row' spacing={4} sx={{alignItems:'baseline'}} > 
-     <Typography variant='body2'>This is the shortened link</Typography>
+
+     <Typography variant='body2' style={{color:'hsl(179, 100%, 42%)'}} >{shortenedLink}</Typography>
+
+  
 
       <ThemeProvider theme={theme}>
- <Button 
+      <CopyToClipboard text={shortenedLink} >
+
+  <Button 
+  onClick={handleCopy}
  style={{textTransform:'none', color:'white'}} 
  variant='contained' 
  sx={{
@@ -220,7 +260,9 @@ function Top() {
        lg:'4%'
  }
 }}
- disableElevation>Copy</Button>
+ disableElevation>{copied ? 'Copied' : 'Copy' }</Button>
+
+  </CopyToClipboard>
  </ThemeProvider>
 
       </Stack>  
