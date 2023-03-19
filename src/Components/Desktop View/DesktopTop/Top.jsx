@@ -8,12 +8,10 @@ import axios from 'axios'
 
 
 function Top() {
-  const [texts, setTexts] = useState([]);
-  const [shortenedLink, setShortenedLink] = useState('')
+  const [data, setData] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [copied, setCopied] = useState(false)
-  const [buttonShortener, setButtonShortener] = useState('');
-  // const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
 
    
   const theme = createTheme({
@@ -26,40 +24,35 @@ function Top() {
 
       const shortenHandler = () => {
         if (inputValue !== "") {
-          setTexts([...texts, inputValue]);
           setInputValue("");
+          fetchData()
         }
-        setButtonShortener(shortenedLink)
       }
 
       const handleCopy = () => {
         setCopied(true);
         setTimeout(() => {
          setCopied(false)
-        }, 1500);
+        }, 1200);
       }
 
       const fetchData = async () => {
         try{
          const res = await axios.get(`https://api.shrtco.de/v2/shorten?url=${inputValue}`);
-         setShortenedLink(res.data.result.full_short_link)
+         const shortenedText = (res.data.result.full_short_link);
+         const newItem = {
+          id: Math.random().toString(36).substr(2, 9),
+          input: inputValue,
+          shortened: shortenedText,
+        };
+        setData([...data, newItem]);
         } catch(err){
          console.log(err)
         } 
       }
-      useEffect(()=>{
-        if(inputValue.length){
-          fetchData()
-        }
-      },[inputValue])
-
-
-    
-
      
 
-
-      console.log(shortenedLink)
+   
 
   return (
    <Stack spacing={10}  >
@@ -216,10 +209,10 @@ function Top() {
  {/* LINKSSSS */}
 
       
-      {texts.map((text, index) => (
-        <>
+      {data.map((text) => (
+      
           <Stack 
-          key={index}
+          key={text.id}
         spacing={1}
          sx={{
          margin:'auto',
@@ -239,16 +232,18 @@ function Top() {
         direction='row'
         >
 
-      <Typography variant='body2'> {text} </Typography>
+      <Typography key={`input-${text.id}`} variant='body2'> {text.input} </Typography>
 
      <Stack direction='row' spacing={4} sx={{alignItems:'baseline'}} > 
+     
 
-     <Typography variant='body2' style={{color:'hsl(179, 100%, 42%)'}} >{shortenedLink}</Typography>
+     <Typography key={`shortened-${text.id}`} variant='body2' style={{color:'hsl(179, 100%, 42%)'}} >{text.shortened}</Typography>
 
   
 
       <ThemeProvider theme={theme}>
-      <CopyToClipboard text={shortenedLink} >
+
+      <CopyToClipboard key={`btn-${text.id}`}  text={text.shortened} >
 
   <Button 
   onClick={handleCopy}
@@ -268,7 +263,7 @@ function Top() {
       </Stack>  
      
      </Stack>
-        </>
+      
       ))}
       
 </Box>
