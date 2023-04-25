@@ -11,7 +11,7 @@ function Top() {
   const [data, setData] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [copied, setCopied] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
    
   const theme = createTheme({
@@ -44,6 +44,8 @@ function Top() {
           id: Math.random().toString(36).substr(2, 9),
           input: inputValue,
           shortened: shortenedText,
+          copy: 'Copy',
+          copied:"Copied!"
         };
         setData([...data, newItem]);
         } catch(err){
@@ -51,7 +53,7 @@ function Top() {
         } 
       }
      
-
+      // `${copied ? 'Copied' : 'Copy' }`
    
 
   return (
@@ -243,19 +245,23 @@ function Top() {
 
       <ThemeProvider theme={theme}>
 
-      <CopyToClipboard key={`btn-${text.id}`}  text={text.shortened} >
+      <CopyToClipboard   text={text.shortened} >
 
   <Button 
+  key={`copy-${text.id}`}
   onClick={handleCopy}
  style={{textTransform:'none', color:'white'}} 
  variant='contained' 
  sx={{
   width:{
-       sm:'4%',
+        sm:'34px',    
        lg:'4%'
+ },
+ padding:{
+  sm: '8px'
  }
 }}
- disableElevation>{copied ? 'Copied' : 'Copy' }</Button>
+ disableElevation> {copied ? text.copied: text.copy }  </Button>
 
   </CopyToClipboard>
  </ThemeProvider>
