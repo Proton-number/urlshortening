@@ -53,7 +53,6 @@ function Top() {
         } 
       }
      
-      // `${copied ? 'Copied' : 'Copy' }`
    
 
   return (
@@ -132,7 +131,7 @@ function Top() {
         src={illustration} 
         sx={{
             width:{
-              sm: '340px', //600
+              sm: '240px', //600
               md:'330px', //900
                 lg:'420px'
             }

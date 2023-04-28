@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box,  Typography, Stack,  createTheme, ThemeProvider, Button } from '@mui/material'
+import { Box,  Typography, Stack,  createTheme, ThemeProvider, Button, Grid } from '@mui/material'
 import logo from '/src/images/logo.svg'
 import facebook from '/src/images/icon-facebook.svg'
 import instagram from '/src/images/icon-instagram.svg'
@@ -17,8 +17,10 @@ function Footer() {
         primary:{
             main:'hsl(179, 100%, 42%)'
         }
-    }
+    },
+   
 })
+
 
 
   return (
@@ -59,31 +61,39 @@ function Footer() {
         </Stack>   
 
 
- <Stack 
-    direction='row'  
-    spacing={{
-        sm: 4,
-        lg: 40,
-        custom: 7
-    }} 
+<Grid 
+     container
+     spacing={1}
+    direction={{sm:'column', md:'row', lg:'row'}}  
     sx={{
+        display:'flex',
         alignItems:'center',
         padding:{
             sm:4
         },
         backgroundColor:'black',
         color:'white'
-    }}
-    >
+    }}>
+
+
+
+   
 
         <Box>
-            <Box component='img' src={logo} />
+            <Box 
+            component='img' 
+            src={logo} 
+            sx={{
+            width:{
+                sm: '80px'
+            }
+            }} />
         </Box>
 
-        <Stack 
-        direction='row' 
+        <Grid
+        item
+        direction={{sm:'column', md:'row', lg:'row'}}
         spacing={{
-            sm: 10 ,//600
             md: 12 , //900
             lg: 20, //1200
             custom: 10
@@ -106,24 +116,97 @@ function Footer() {
             
             <Stack spacing={1}> 
             <Typography variant='h6'>Company</Typography>
-                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>About</Typography>
+                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle1'>About</Typography>
                 <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Our Team</Typography>
                 <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Careers</Typography>
                 <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Contact</Typography>
             </Stack>
 
-        </Stack>
+        </Grid>
 
         <Stack spacing={2} direction='row'>
-        <Box component='img' id='footer-img' src={facebook} sx={{width:'20px', height:'20px', cursor:'pointer'}} />
-        <Box component='img' id='footer-img' src={twitter} sx={{width:'20px',height:'20px' ,cursor:'pointer'}}/>
-        <Box component='img' id='footer-img' src={pinterest} sx={{width:'20px',height:'20px', cursor:'pointer'}}/>
-        <Box component='img' id='footer-img' src={instagram} sx={{width:'20px',height:'20px', cursor:'pointer'}}/>
+
+        <Box 
+        component='img' 
+        id='footer-img' 
+        src={facebook} 
+        sx={{
+            width:{
+                sm:'15px',
+                md:'',
+                lg:''
+            },
+             height:{
+                sm:'',
+                md:'',
+                lg:''
+             }, 
+             cursor:'pointer'
+            }} />
+
+        <Box 
+        component='img' 
+        id='footer-img' 
+        src={twitter} 
+        sx={{
+            width:{
+                sm:'15px',
+                md:'',
+                lg:''
+            },
+            height:{
+                sm:'',
+                md:'',
+                lg:''
+            },
+            cursor:'pointer'
+            }}/>
+
+        <Box 
+        component='img' 
+        id='footer-img' 
+        src={pinterest} 
+        sx={{
+            width:{
+                sm:'15px',
+                md:'',
+                lg:''
+            },
+            height:{
+                sm:'',
+                md:'',
+                lg:''
+            },
+             cursor:'pointer'
+             }}/>
+
+        <Box 
+        component='img' 
+        id='footer-img' 
+        src={instagram} 
+        sx={{
+            width:{
+                sm:'15px',
+                md:'',
+                lg:''
+            },
+            height:{
+                sm:'',
+
+            }, 
+            cursor:'pointer'
+            }}/>
+
         </Stack>
       
-    </Stack>
+    
 
 
+
+
+
+
+</Grid>
 
    </>
   )
