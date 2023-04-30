@@ -63,13 +63,12 @@ function Footer() {
 
 <Grid 
      container
-     spacing={1}
-    direction={{sm:'column', md:'row', lg:'row'}}  
+     spacing={2}
+    direction={{sm:'column'}}  
     sx={{
-        display:'flex',
-        alignItems:'center',
         padding:{
-            sm:4
+            sm:4,
+            lg: 16
         },
         backgroundColor:'black',
         color:'white'
@@ -79,127 +78,148 @@ function Footer() {
 
    
 
-        <Box>
+   
+
+        <Grid
+        container
+        direction={{sm:'column', lg:'row'}}
+        sx={{
+            display:"flex",
+            justifyContent:'space-between',
+            alignItems:'center'
+        }}
+        spacing={{
+            md: 0 , //900
+            lg: 2,
+            custom: 0
+        }}
+        >
+
+<Box>
             <Box 
             component='img' 
             src={logo} 
             sx={{
             width:{
-                sm: '80px'
+                sm: '120px'
+            },
+            marginBottom:{
+                sm:4,
+                lg: 0,
+                custom:4
             }
             }} />
         </Box>
 
-        <Grid
-        item
-        direction={{sm:'column', md:'row', lg:'row'}}
-        spacing={{
-            md: 12 , //900
-            lg: 20, //1200
-            custom: 10
-        }}
-        >
-
-            <Stack spacing={1}> 
-                <Typography variant='h6'>Features</Typography>
-                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}} variant='subtitle2'>Link Shortening</Typography>
-                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Branded Links</Typography>
-                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Analytics</Typography>
+            <Stack spacing={{
+                sm: 2,
+            }} 
+            sx={{
+                marginBottom:{
+                    sm: 4,
+                    lg:0,
+                    custom:2,
+                    
+                },
+            }}> 
+                <Typography variant='h5'>Features</Typography>
+                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}} variant='subtitle1'>Link Shortening</Typography>
+                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle1'>Branded Links</Typography>
+                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle1'>Analytics</Typography>
             </Stack>
 
-            <Stack  spacing={1}>
-            <Typography variant='h6'>Resources</Typography>
-                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Blog</Typography>
-                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Developers</Typography>
-                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Support</Typography>
+            <Stack  spacing={2} sx={{
+                marginBottom:{
+                    sm: 4,
+                    lg:0,
+                    custom: 2
+                },
+               
+            }}>
+            <Typography variant='h5'>Resources</Typography>
+                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle1'>Blog</Typography>
+                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle1'>Developers</Typography>
+                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle1'>Support</Typography>
             </Stack>
             
-            <Stack spacing={1}> 
-            <Typography variant='h6'>Company</Typography>
+            <Stack spacing={2} sx={{
+                marginBottom:{
+                    sm: 4,
+                    lg: -4.5
+                },
+                marginRight:{
+                  custom:2,
+                  md:2
+                }
+            }}> 
+            <Typography variant='h5'>Company</Typography>
                 <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle1'>About</Typography>
-                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Our Team</Typography>
-                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Careers</Typography>
-                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle2'>Contact</Typography>
+                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle1'>Our Team</Typography>
+                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle1'>Careers</Typography>
+                <Typography component={motion.p} whileHover={{color:'hsl(179, 100%, 42%)'}}  variant='subtitle1'>Contact</Typography>
             </Stack>
+
+            <Stack spacing={4} direction='row'>
+
+<Box 
+component='img' 
+id='footer-img' 
+src={facebook} 
+sx={{
+    width:{
+        sm:'30px',
+        md:' 30px',
+        lg:'30px'
+    },
+     cursor:'pointer'
+    }} />
+
+<Box 
+component='img' 
+id='footer-img' 
+src={twitter} 
+sx={{
+    width:{
+        sm:'34px',
+        md:'30px',
+        lg:'30px'
+    },
+    cursor:'pointer'
+    }}/>
+
+<Box 
+component='img' 
+id='footer-img' 
+src={pinterest} 
+sx={{
+    width:{
+        sm:'30px',
+        md:'30px',
+        lg:'30px'
+    },
+     cursor:'pointer'
+     }}/>
+
+<Box 
+component='img' 
+id='footer-img' 
+src={instagram} 
+sx={{
+    width:{
+        sm:'30px',
+        md:'30px',
+        lg:'30px'
+    },
+    cursor:'pointer'
+    }}/>
+
+</Stack>
+
+
 
         </Grid>
 
-        <Stack spacing={2} direction='row'>
-
-        <Box 
-        component='img' 
-        id='footer-img' 
-        src={facebook} 
-        sx={{
-            width:{
-                sm:'15px',
-                md:'',
-                lg:''
-            },
-             height:{
-                sm:'',
-                md:'',
-                lg:''
-             }, 
-             cursor:'pointer'
-            }} />
-
-        <Box 
-        component='img' 
-        id='footer-img' 
-        src={twitter} 
-        sx={{
-            width:{
-                sm:'15px',
-                md:'',
-                lg:''
-            },
-            height:{
-                sm:'',
-                md:'',
-                lg:''
-            },
-            cursor:'pointer'
-            }}/>
-
-        <Box 
-        component='img' 
-        id='footer-img' 
-        src={pinterest} 
-        sx={{
-            width:{
-                sm:'15px',
-                md:'',
-                lg:''
-            },
-            height:{
-                sm:'',
-                md:'',
-                lg:''
-            },
-             cursor:'pointer'
-             }}/>
-
-        <Box 
-        component='img' 
-        id='footer-img' 
-        src={instagram} 
-        sx={{
-            width:{
-                sm:'15px',
-                md:'',
-                lg:''
-            },
-            height:{
-                sm:'',
-
-            }, 
-            cursor:'pointer'
-            }}/>
-
-        </Stack>
-      
-    
+     
 
 
 

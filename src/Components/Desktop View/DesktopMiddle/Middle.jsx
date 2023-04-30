@@ -46,22 +46,23 @@ function Middle() {
 
     
 <Stack 
-        direction='row' 
-        spacing={4} 
+        direction={{sm:'column', custom:'row', md:'row', lg:'row'}} 
+        spacing={8} 
     sx={{
         padding:{
-            sm:'40px',
+            sm:'60px',
             lg:'9rem'
         }
     }}
     className='desktop-boxes'
+    id='desktop-boxes'
  >
 
 
 
     <Stack 
     component={motion.div}
-    initial={{y:-30}}
+    initial={{y:-26}}
     whileInView={{y:0}}
     transition={{delay:.2}}
     spacing={1} 
@@ -69,7 +70,7 @@ function Middle() {
         backgroundColor:'hsl(0, 0%, 100%)',
          color:'black',
          padding:{
-            sm:'30px',
+            sm:'25px',
             lg:'2.3rem 1rem 2rem 1.5rem'
          },
          position:'relative',
@@ -81,22 +82,23 @@ function Middle() {
         sx={{
             backgroundColor:'hsl(260, 27%, 26%)', 
             width:{
-                sm:'13%',
-                lg:'6.8%',
-                custom:'12%'
+                sm:'6%',
+                lg:'5%',
+                custom:'14%'
             }, 
             display:'flex', 
             justifyContent:'center', 
             padding:{
-                sm:'12px'
+                sm:'12px',
+                lg:'14px'
             }, 
             borderRadius:'80%',
-            position: 'absolute',
+            position: "inherit",
             bottom:{
-                sm:'284px',
-                md:'220px',
-                lg:'170px',
-                custom:'230px'
+                sm:'46px',
+                md:'44px',
+                lg:'60px',
+                custom:'40px'
             }
             }}
             >
@@ -108,8 +110,8 @@ function Middle() {
             width:{
                 sm:'70%',
                 md:'74%',
-                lg:'22px',
-                custom:'76%'
+                lg:'12px',
+                custom:'62%'
             },
            
              }}  />
@@ -123,7 +125,7 @@ function Middle() {
 
     <Stack 
      component={motion.div}
-     initial={{y:60}}
+     initial={{y:40}}
      whileInView={{y:0}}
      transition={{delay:.2}}
     spacing={1} 
@@ -145,21 +147,23 @@ function Middle() {
         sx={{
             backgroundColor:'hsl(260, 27%, 26%)', 
             width:{
-                sm:'10%',
-                lg:'6%'
+                sm:'4.6%',
+                lg:'4.5%',
+                custom:'12%'
             }, 
             display:'flex', 
             justifyContent:'center', 
             padding:{
-                sm:'15px'
+                sm:'15px',
+                // custom:'20px'
             }, 
             borderRadius:'80%',
-            position: 'absolute',
+            position: 'inherit',
             bottom:{
-                sm: '285px',
-                md:'230px',
-                lg:'170px' ,
-                custom:'234px'
+                sm: '46px',
+                md:'48px',
+                lg:'60px' ,
+                custom:'44px'
             }
             }}
             >
@@ -169,6 +173,7 @@ function Middle() {
         sx={{
             width:{
                 sm:'84%',
+                custom:'80%',
                 md:'95%',
             }
              }}  />
@@ -181,7 +186,7 @@ function Middle() {
 
     <Stack 
      component={motion.div}
-     initial={{y:-30}}
+     initial={{y:-10}}
      whileInView={{y:0}}
      transition={{delay:.2}}
     spacing={1} 
@@ -204,8 +209,9 @@ function Middle() {
         sx={{
             backgroundColor:'hsl(260, 27%, 26%)', 
             width:{
-                sm:'10%',
-                lg:'6.8%'
+                sm:'4.6%',
+                lg:'4.5%',
+                custom:'12%'
             }, 
             display:'flex', 
             justifyContent:'center', 
@@ -213,12 +219,12 @@ function Middle() {
                 sm:'15px'
             }, 
             borderRadius:'80%',
-            position: 'absolute',
+            position: 'inherit',
             bottom:{
-                sm:'280px',
-                md:'226px',
-                lg:'170px',
-                custom:'230px'
+                sm:'48px',
+                md:'48px',
+                lg:'62px',
+                custom:'44px'
             }
             }}
             >
@@ -228,7 +234,9 @@ function Middle() {
         sx={{
             width:{
                 sm:'88%', //600
-                md:'100%', //1200
+                custom:'80%', //881
+                md:'100%', //900
+                lg:'120%' //1200
             }
              }}  />
         </Box>

@@ -20,6 +20,20 @@
     margin: auto;
 }
 
+#desktop-boxes::before{
+    content: '';
+    position: absolute;
+    height: 640px;
+    width: 1.5%;
+    top: 50%;
+   background-color: hsl(180deg, 66%, 49%);
+   left: 0;
+   right: 0;
+   transform: translateY(-50%);
+   z-index: -1;
+   margin: auto;
+}
+
 
 #footer-img:hover{
     filter: invert(75%) sepia(100%) saturate(463%) hue-rotate(115deg) brightness(86%) contrast(98%);
@@ -31,7 +45,54 @@
     #desktop-view{
         display: block;
     }
+
+    #desktopNav2{
+        display: none;
+       }
+
+ }
+
+ 
+@media screen and (min-width:600px) and (max-width:640px) {
+    
+    #desktopNav2{
+        display: block;
+       }
+    
+ #desktopNav{
+    display: none;
+}
+ }
+
+
+  
+@media screen and (min-width:881px) {
+    
+ 
+    #desktop-boxes::before{
+       display: none;
+    }
+    
+    
+    
+     }
+    
+    
     
 
-   
+ 
+@media screen and (min-width:1200px) {
+    
+ 
+#desktop-boxes::before{
+   display: none;
+}
+
+
+
  }
+
+
+
+ 
+  

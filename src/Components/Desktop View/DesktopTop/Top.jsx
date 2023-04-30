@@ -199,7 +199,7 @@ function Top() {
        variant='contained' 
        sx={{
         width:{
-             sm:'18%',
+             sm:'24%',
              lg:'9.4%'
         }
       }}
@@ -218,7 +218,7 @@ function Top() {
          sx={{
          margin:'auto',
           backgroundColor:'white',
-          alignItems:'center', 
+          alignItems:'baseline', 
           justifyContent:'space-between',
           marginBottom:'40px',
           padding:{
@@ -226,7 +226,7 @@ function Top() {
             lg:'15px' //1200
           },
           width:{
-            sm:'80%',
+            sm:'88%',
             lg: '52%' //1200
           },
         }}
